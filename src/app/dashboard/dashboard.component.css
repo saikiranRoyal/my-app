@@ -1,0 +1,40 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.left{
+    width:20%;
+    height: 100%;
+    background-color: gray;
+    text-align: center;
+    color:white
+}
+.left h4:hover{
+    background-color: bisque;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    color:rgb(71, 138, 254)
+    
+    
+ }
+ .left h4{
+    margin:0;
+    padding: 15px;
+    margin: auto;
+    width:80%;
+    border-radius:10px;
+ }
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: rgb(248, 110, 204);
+}
+button:hover{
+    background-color: rgb(0, 255, 106);
+    border:0px;
+    width:40%;
+    height:5%;
+    border-radius:10px;
+    cursor: pointer;
+}
