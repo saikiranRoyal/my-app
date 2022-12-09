@@ -8,6 +8,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { HomeComponent } from './home/home.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { RectangleComponent } from './rectangle/rectangle.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { HomeComponent } from './home/home.component';
     DashboardComponent,
     PagenotfoundComponent,
     CalculatorComponent,
-    HomeComponent
+    HomeComponent,
+    DataBindingComponent,
+    RectangleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,14 @@
 <div class="bg-calc">
      <div class="calc">
           <h2>Calculator</h2>
-           <input type="number">
+           <input type="number" [(ngModel)]="number1">
            <br><br>
-           <input type="number">
+           <input type="number" [(ngModel)]="number2">
            <br><br>
-           <button>ADD +</button>
-           <button>SUB -</button>
-           <button>MUL *</button>
-           <button>DIV /</button>
-
+           <button (click)="add()">ADD +</button>
+           <button (click)="sub()">SUB -</button>
+           <button (click)="mul()">MUL *</button>
+           <button (click)="div()">DIV /</button>
+           <h2>result {{result}}</h2>
      </div>
 </div>
