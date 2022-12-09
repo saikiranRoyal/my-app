@@ -12,7 +12,8 @@
     align-items: center;
 }
 .rect{
-    background: radial-gradient(50% 106%,rgb(102, 252, 139), rgb(200, 131, 249), rgb(12, 242, 169));
+    background: radial-gradient(50% 106%,
+    rgb(102, 252, 139), rgb(200, 131, 249), rgb(12, 242, 169));
     height:40%;
     width:40%;
     text-align: center;
