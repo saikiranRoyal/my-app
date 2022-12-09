@@ -1,0 +1,13 @@
+<div class="bg-rect">
+    <div class="rect">
+         <h2>Rectangle</h2>
+          <input type="number" [(ngModel)]="length" placeholder="length">
+          <br><br>
+          <input type="number" [(ngModel)]="breadth">
+          <br><br>
+          <button (click)="area()">AREA</button>
+          <button (click)="perimeter()">PERIMETER</button>
+          
+          <h2>{{are}} {{result}}</h2>
+    </div>
+</div>
