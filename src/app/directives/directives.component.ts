@@ -45,14 +45,14 @@ export class DirectivesComponent {
                 "Puducherry"]
 
                 public users:any=[
-                  {name:'anil',age:20, package:10},
-                  {name:'anil',age:20, package:10},
+                  {name:'anil',age:18, package:7},
+                  {name:'anil',age:30, package:15},
 
-                  {name:'anil',age:20, package:10},
+                  {name:'anil',age:20, package:12},
 
-                  {name:'anil',age:20, package:10},
+                  {name:'anil',age:35, package:7},
 
-                  {name:'anil',age:20, package:10},
+                  {name:'anil',age:40, package:11},
 
                   {name:'anil',age:20, package:10},
                   
@@ -60,5 +60,6 @@ export class DirectivesComponent {
                   
                 ]
                 public time:number=20;
+                public today:any=new Date();
   }
 

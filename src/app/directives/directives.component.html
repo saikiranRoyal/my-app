@@ -1,4 +1,8 @@
 <p>directives works!</p>
+<h1>{{today}}</h1>
+<h2>{{today| date}}</h2>
+<h2>{{today| date:'YYYY-MM-dd/hh:mm:ss'}}</h2>
+<h2>{{today| date}}</h2>
 
 <ol>
     <li  *ngFor="let name of names">{{name}}</li>
@@ -19,9 +23,9 @@
 </thead>
 <tbody>
     <tr *ngFor="let user of users">
-         <td>{{user.name}}</td>
-         <td>{{user.age}}</td>
-         <td>{{user.package}}</td>
+         <td>{{user.name | uppercase}}</td>
+         <td [ngClass]="{'red':user.age<20, 'yellow':user.age>=20&&user.age<30, 'green':user.age>=30}">{{user.age}}</td>
+         <td [ngStyle]="{'background-color':user.package<10?'red':'green'}">{{user.package}}</td>
     </tr>
 </tbody>
 
@@ -33,3 +37,5 @@
 <h1 *ngIf="time>13&&time<20;"> Good afternoon</h1>
 
 <h1 *ngIf="time>=20&&time<24;"> Good night</h1>
+
+<button class="btn btn-primaryy  ">go</button>
