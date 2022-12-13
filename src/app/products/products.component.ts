@@ -17,7 +17,7 @@ export class ProductsComponent {
  }
  
  sort(){
-  // this.details=this.details.sort((a:any,b:any)=>a.name-b.name);
+  this.details=this.details.sort((a:any,b:any)=>a.name.localeCompare (b.name));
   this.details=this.details.sort((a:any,b:any)=>a.price-b.price);
 
  }
