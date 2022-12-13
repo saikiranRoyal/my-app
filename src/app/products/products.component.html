@@ -1,0 +1,17 @@
+<button class="btn btn-warning" (click)="sort()">sort</button>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+        <th *ngFor="let key of keys">{{key | uppercase}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let value of details">
+            <td >{{value.name}}</td>
+            <td>{{value.price}}</td>
+            <td>{{value.quantity}}</td>
+            <td [ngStyle]="{'background-color':value.rating>3? 'green': 'red'}">{{value.rating}}</td>
+        </tr>
+    </tbody>
+ 
+</table>
