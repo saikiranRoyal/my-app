@@ -6,15 +6,16 @@
     height:60%;
     width:40%;
     overflow: auto;
-    box-shadow: 0px 0px 10px black;
+    
     border-radius:20px;
     padding:20px;
    
     
 }
 .child:hover{
-    background-color: rgb(125, 222, 251);
+    
     cursor: grab;
+    box-shadow: 0px 0px 20px black;
 }
 .desc{
    font-size:10px;

@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SbibankComponent } from './sbibank/sbibank.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
+import { BoredomComponent } from './boredom/boredom.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MailComponent } from './mail/mail.component';
     SbibankComponent,
     FlipkartComponent,
     MailComponent,
+    BoredomComponent,
     
   ],
   imports: [
