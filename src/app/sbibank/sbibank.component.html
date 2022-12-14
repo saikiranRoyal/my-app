@@ -15,12 +15,15 @@
     </thead>
     <tbody>
         <tr *ngFor="let details of accountdetails">
-            <td *ngFor="let key of keys">{{details[key]}}</td>
+            <!-- <td *ngFor="let key of keys">{{details[key]}}</td> -->
+            <td>{{details.createdAt}}</td>
+            <td>{{details.account_name}}</td>
+            <td>{{details.available_balance}}</td>
+            <td>{{details.currency}}</td>
+            <td><img src="{{details.user_image}}" alt="" height="50" width="50"></td>
+            <td>{{details.account_number}}</td>
+            <td>{{details.id}}</td>
             
-            
-
-           
-
        </tr>
     </tbody>
     

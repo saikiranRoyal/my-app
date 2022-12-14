@@ -28,7 +28,7 @@
 .right{
     width: 80%;
     height: 100%;
-    background-color: rgb(248, 110, 204);
+    background-color: rgb(195, 248, 110);
     overflow: auto;
 }
 button:hover{
