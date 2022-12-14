@@ -14,6 +14,9 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { ProductsComponent } from './products/products.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SbibankComponent } from './sbibank/sbibank.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +31,15 @@ import { ProductsComponent } from './products/products.component';
     DirectivesComponent,
     GpayComponent,
     ProductsComponent,
+    VehicleComponent,
+    SbibankComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

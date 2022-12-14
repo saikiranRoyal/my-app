@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductsComponent } from './products/products.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
+import { SbibankComponent } from './sbibank/sbibank.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:"login", component: LoginComponent},
@@ -20,7 +22,9 @@ const routes: Routes = [
     {path:"rectangle", component:RectangleComponent},
     {path:"directives", component:DirectivesComponent},
     {path:"gpay", component:GpayComponent},
-    {path:"products", component:ProductsComponent}
+    {path:"products", component:ProductsComponent},
+    {path:"vehicle", component:VehicleComponent},
+    {path:"sbibank", component:SbibankComponent}
   ]},
   // {path:"calculator", component: CalculatorComponent},
   {path:"", component: LoginComponent},
