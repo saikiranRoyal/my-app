@@ -59,4 +59,16 @@ export class VehicleComponent {
       )
     }
     
+page(pageNo:number){
+  this._vehicleservice.getpagevehicle(pageNo).subscribe(
+    (data:any)=>{
+      this.vehicles=data;
+     },
+     (err:any)=>{
+      alert("server error")
+     }
+  )
+}
+
+
 }
