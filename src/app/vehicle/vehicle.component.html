@@ -25,6 +25,7 @@
             <th>color</th>
             <th>image</th>
             <th>id</th>
+            <th>actions</th>
         
         </tr>
     </thead>
@@ -38,6 +39,8 @@
              <td>{{Vehicle.color}}</td>
              <td><img src="{{Vehicle.image}}" alt="" width="50" height="50"> </td>
              <td>{{Vehicle.id}}</td>
+             <td><button (click)="delete(Vehicle.id)" class="btn btn-danger">delete</button>
+             </td>
              
 
             
@@ -48,6 +51,7 @@
 </table>
 
 <ul class="pagination">
+    
     <li (click)="page(1)" class="page-item"><a class="page-link">1</a></li>
     <li (click)="page(2)" class="page-item"><a class="page-link" >2</a></li>
     <li (click)="page(3)" class="page-item"><a class="page-link" >3</a></li>

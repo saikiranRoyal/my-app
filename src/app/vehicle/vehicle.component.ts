@@ -10,7 +10,7 @@ export class VehicleComponent {
   public vehicles:any=[]
   public term:string= "";
   public id:string="";
-
+  
 
     constructor(private _vehicleservice:VehicleService){
       this._vehicleservice.getVehicles().subscribe(
@@ -69,6 +69,19 @@ page(pageNo:number){
      }
   )
 }
+
+delete(id:string) {
+  this._vehicleservice.deleteVehicle(id).subscribe(
+    (data:any)=>{
+      alert("Delete Successfully") ;
+      location.reload();
+     },
+     (err:any)=>{
+      alert("server error")
+     }
+  )
+}
+
 
 
 }

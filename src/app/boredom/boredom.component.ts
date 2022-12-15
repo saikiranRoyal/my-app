@@ -9,14 +9,14 @@ import { BoredomService } from '../boredom.service';
 export class BoredomComponent {
   public boredomdata:any={};
   constructor(private _boredomService:BoredomService){}
-    function() {
-      this._boredomService.getbordeom().subscribe(
-        (data:any)=>{
-         this.boredomdata=data;
-        },
-        (err:any)=>{
-         alert("server error");
-        }
-      )
-    }
+  function() {
+    this._boredomService.getbordeom().subscribe(
+      (data:any)=>{
+        this.boredomdata=data;
+      },
+      (err:any)=>{
+        alert("server error");
+      }
+    )
+  }
   }
