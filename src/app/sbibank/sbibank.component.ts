@@ -9,6 +9,7 @@ import { SbibankService } from '../sbibank.service';
 export class SbibankComponent {
   public accountdetails:any=[]
   public keys :any = []
+  public term :any=[]
 
    constructor(private _sbiBankServices:SbibankService){
     this._sbiBankServices.getBankdetails().subscribe(
@@ -21,5 +22,18 @@ export class SbibankComponent {
         alert("some server errors")
       }
     )
+
+   }
+   filter(){
+      this._sbiBankServices.getBankdetailsfilter(this.term).subscribe(
+        (data:any)=>{
+          this.accountdetails=data;
+         
+  
+        },
+        (err:any)=>{
+          alert("some server errors")
+        }
+      )
    }
 }
