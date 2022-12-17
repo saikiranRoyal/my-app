@@ -70,7 +70,7 @@ page(pageNo:number){
   )
 }
 
-delete(id:string) {
+delete(id:any) {
   this._vehicleservice.deleteVehicle(id).subscribe(
     (data:any)=>{
       alert("Delete Successfully") ;
