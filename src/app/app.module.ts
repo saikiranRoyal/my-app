@@ -43,6 +43,7 @@ import { CreateBankdetailsComponent } from './create-bankdetails/create-bankdeta
     BoredomComponent,
     CreateVehicleComponent,
     CreateBankdetailsComponent,
+  
     
   ],
   imports: [
