@@ -24,6 +24,7 @@ export class LoginComponent {
       (data:any)=>{
         // alert("login successfull")
         this._router.navigateByUrl("/dashboard")
+        sessionStorage.setItem('my-app-token',data.token);
       },
       (err:any)=>{
         alert("incorrect  password or username")

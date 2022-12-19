@@ -10,5 +10,6 @@ export class DashboardComponent {
   constructor(private _router:Router){}
   logout(){
     this._router.navigateByUrl("/login")
+    sessionStorage.removeItem('my-app-token')
   }
 }
