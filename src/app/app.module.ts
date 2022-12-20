@@ -22,6 +22,7 @@ import { MailComponent } from './mail/mail.component';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateBankdetailsComponent } from './create-bankdetails/create-bankdetails.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CreateBankdetailsComponent } from './create-bankdetails/create-bankdeta
     BoredomComponent,
     CreateVehicleComponent,
     CreateBankdetailsComponent,
+    CreateStudentComponent,
   
     
   ],
