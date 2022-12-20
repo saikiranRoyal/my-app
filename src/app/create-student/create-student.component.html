@@ -41,6 +41,24 @@
          </div>
       </div>
      <button class="btn btn-primary" (click)="add()">Add card</button>
+      <br>
+     <label for="">type</label>
+     <input type="radio" name="type" id="" formControlName="type" value="dayscholar">
+     <label for="">day scholar</label>
+     <input type="radio" name="type" id="" formControlName="type" value="residential">
+     <label for="">residential</label>
+     <br>
 
+    <div *ngIf="studentForm.get('type')?.value == 'dayscholar'">
+        <label for=""> Bus fee:</label>
+        <input type="number" formControlName="busFee">
+     <br>
+    </div>
+
+     <div *ngIf="studentForm.get('type')?.value == 'residential'">
+        <label for=""> Hostel fee:</label>
+        <input type="number" formControlName="hostelFee">
+     <br>
+    </div>
     <button class="btn btn-success" (click)="submit()">submit</button>
 </form>

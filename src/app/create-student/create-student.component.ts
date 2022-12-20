@@ -20,8 +20,10 @@ export class CreateStudentComponent {
 
         }
       ),
-      cards:new FormArray([])
-       
+      cards:new FormArray([]),
+      type:new FormControl(),
+      busFee:new FormControl(),
+      hostelFee:new FormControl(),
     }
   );
   get cardsFormArray(){
