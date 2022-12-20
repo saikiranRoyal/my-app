@@ -40,6 +40,10 @@ export class CreateStudentComponent {
       )
     )
   }
+  
+   delete(i:number){
+    this.cardsFormArray.removeAt(i);
+   }
 
   submit(){
     console.log(this.studentForm.value)
