@@ -6,11 +6,13 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./create-student.component.css']
 })
 export class CreateStudentComponent {
+  // normal form decalaration in ts
   public studentForm:FormGroup=new FormGroup(
     {
       name:new FormControl(),
       phone:new FormControl(),
       email:new FormControl(),
+      // nesetd forms 
       address:new FormGroup(
         {
           city:new FormControl(),
@@ -20,6 +22,7 @@ export class CreateStudentComponent {
 
         }
       ),
+      // form array
       cards:new FormArray([]),
       type:new FormControl(),
       busFee:new FormControl(),

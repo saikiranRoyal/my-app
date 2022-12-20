@@ -1,3 +1,4 @@
+<!-- normal forms  -->
 <form action="" [formGroup]="studentForm">
     <label for="">Name</label>
     <input type="text" formControlName="name">
@@ -8,7 +9,7 @@
     <label for="">Email</label>
     <input type="text" formControlName="email">
     <br>
-    
+    <!-- nested forms -->
     <div formGroupName="address">
         <label for="">city</label>
         <input type="text" formControlName="city">
@@ -20,7 +21,7 @@
         <input type="text" formControlName="pin">
         <br>
     </div>
-    
+    <!-- form array -->
       <div formArrayName="cards">
          <div *ngFor="let cards of cardsFormArray.controls; let i =index">
               <div formGroupName="{{i}}">
