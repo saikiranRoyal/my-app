@@ -1,0 +1,108 @@
+<form [formGroup]="employeeForm" action="">
+    <label for="">Name:</label>
+    <input formControlName="name" type="text" name="" id="">
+    <br>
+
+    <label for="">Mobile No:</label>
+    <input formControlName="mobile" type="number" name="" id="">
+    <br>
+
+    <label for="">Email:</label>
+    <input formControlName="email" type="text" name="" id="">
+    <br>
+
+    <label for="">DoB:</label>
+    <input formControlName="DoB" type="datetime-local" name="" id="">
+    <br>
+
+    <div formGroupName="Adderess">
+        <label for="">AddressLine</label>
+        <input formControlName="addressLine" type="text">
+        <br>
+
+        <label for="">City</label>
+        <input formControlName="city" type="text">
+        <br>
+
+        <label for="">State</label>
+        <input formControlName="state" type="text">
+        <br>
+
+        <label for="">Pincode</label>
+        <input formControlName="pincode" type="text">
+        <br>
+
+        <div formGroupName="Location">
+
+            <label for="">Nearby</label>
+            <input formControlName="nearby" type="text">
+            <br>
+
+            <label for="">Landmark</label>
+            <input formControlName="landmark" type="text">
+            <br>
+        </div>
+
+    </div>
+
+
+    <div formArrayName="Education">
+        <div *ngFor="let education of employeeEducation.controls ; let i = index">
+            <div formGroupName="{{i}}">
+                <h3>Educational Details: {{i+1}}</h3>
+                <label for="">Qualification</label>
+                <input formControlName="qualification" type="text" name="" id="">
+                <br>
+
+                <label for="">Year</label>
+                <input formControlName="year" type="text" name="" id="">
+                <br>
+
+                <label for="">Percentage</label>
+                <input formControlName="percentage" type="text" name="" id="">
+                <br>
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+
+            </div>
+        </div>
+    </div>
+<button (click)="add()"  class="btn btn-primary">Add</button>
+  <br>
+
+  <label for="">type</label>
+  <input type="radio" id="" name="type" value="frontend developer" formControlName="type">
+   <label for="">frontend developer</label>
+   <input type="radio" id="" name="type" value="backend developer" formControlName="type">
+   <label for="">backend developer</label>
+   <br>
+   <div *ngIf="employeeForm.get('type')?.value== 'frontend developer'">
+         <label for="">html</label>
+         <input type="date" formControlName="html">
+         <br>
+         <label for="">css</label>
+         <input type="date" formControlName="css">
+         <br>
+         <label for="">Javascript</label>
+         <input type="date" formControlName="Javascript">
+         <br>
+         <label for="">Angular</label>
+         <input type="date" formControlName="Angular">
+   </div>
+
+   <div *ngIf="employeeForm.get('type')?.value== 'backend developer'">
+    <label for="">NodeJs</label>
+    <input type="date" formControlName="NodeJs">
+    <br>
+    <label for="">EXpressJs</label>
+    <input type="date" formControlName="EXpressJs">
+    <br>
+    <label for="">MongoDB</label>
+    <input type="date" formControlName="MongoDB">
+    <br>
+</div>
+    
+
+
+
+    <button (click)="submit()" class="btn btn-primary"> Submit</button>
+</form>

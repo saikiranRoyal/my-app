@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
 import { BoredomComponent } from './boredom/boredom.component';
@@ -9,7 +9,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { EmployeeFromComponent } from './employee-from/employee-from.component';
+import { EmployeComponent } from './employe/employe.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
@@ -39,7 +39,7 @@ const routes: Routes = [
     {path:"create-vehicle", component:CreateVehicleComponent},
     {path:"create-bankdetails", component:CreateBankdetailsComponent},
     {path:"create-student", component:CreateStudentComponent},
-    {path:"employee-form", component:EmployeeFromComponent}
+    {path:'employee', component:EmployeComponent}
   ]},
   // {path:"calculator", component: CalculatorComponent},
   {path:"", component: LoginComponent},
