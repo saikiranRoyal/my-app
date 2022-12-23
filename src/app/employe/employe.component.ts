@@ -30,7 +30,7 @@ export class EmployeComponent {
     }),
         // FormArray
         Education : new FormArray([]),
-        type:new FormControl(),
+        role:new FormControl(),
         html:new FormControl(),
         css:new FormControl(),
         Javascript:new FormControl(),

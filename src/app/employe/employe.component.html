@@ -66,16 +66,17 @@
             </div>
         </div>
     </div>
-<button (click)="add()"  class="btn btn-primary">Add</button>
+<button (click)="add()"  class="btn btn-primary">Add Education</button>
   <br>
 
-  <label for="">type</label>
-  <input type="radio" id="" name="type" value="frontend developer" formControlName="type">
+  <label for="">role</label>
+  <input type="radio" id="" name="role" value="frontend developer" formControlName="role">
    <label for="">frontend developer</label>
-   <input type="radio" id="" name="type" value="backend developer" formControlName="type">
+   <input type="radio" id="" name="role" value="backend developer" formControlName="role">
    <label for="">backend developer</label>
    <br>
-   <div *ngIf="employeeForm.get('type')?.value== 'frontend developer'">
+   <h2>Years in experience</h2>
+   <div *ngIf="employeeForm.get('role')?.value== 'frontend developer'">
          <label for="">html</label>
          <input type="date" formControlName="html">
          <br>
@@ -89,7 +90,7 @@
          <input type="date" formControlName="Angular">
    </div>
 
-   <div *ngIf="employeeForm.get('type')?.value== 'backend developer'">
+   <div *ngIf="employeeForm.get('role')?.value== 'backend developer'">
     <label for="">NodeJs</label>
     <input type="date" formControlName="NodeJs">
     <br>
