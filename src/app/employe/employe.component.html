@@ -1,41 +1,89 @@
 <form [formGroup]="employeeForm" action="">
     <label for="">Name:</label>
     <input formControlName="name" type="text" name="" id="">
+    <div class="error" *ngIf="employeeForm.get('name')?.touched && employeeForm.get('name')?.invalid ">
+        <p *ngIf="employeeForm.get('name')?.errors?.['required']"> name required</p>
+        <p *ngIf="employeeForm.get('name')?.errors?.['minlength']"> name  should be min 3 characters</p>
+
+    </div>
     <br>
+
 
     <label for="">Mobile No:</label>
     <input formControlName="mobile" type="number" name="" id="">
+    <div class="error" *ngIf="employeeForm.get('mobile')?.touched && employeeForm.get('mobile')?.invalid">
+         <p *ngIf="employeeForm.get('mobile')?.errors?.['required']" >mobile number is required</p>
+         <p *ngIf="employeeForm.get('mobile')?.errors?.['min']" >inavlid phone number less than 10</p>
+         <p *ngIf="employeeForm.get('mobile')?.errors?.['min']" >inavlid phone number less than 10</p>
+
+    </div>
     <br>
 
     <label for="">Email:</label>
     <input formControlName="email" type="text" name="" id="">
+    <div class="error" *ngIf="employeeForm.get('email')?.touched && employeeForm.get('email')?.invalid">
+      <p *ngIf="employeeForm.get('email')?.errors?.['required']"> email is required</p>
+      <p *ngIf="employeeForm.get('email')?.errors?.['email']"> invalid email</p>
+
+    </div>
     <br>
 
     <label for="">DoB:</label>
     <input formControlName="DoB" type="datetime-local" name="" id="">
+    <div class="error" *ngIf="employeeForm.get('DoB')?.touched && employeeForm.get('DoB')?.invalid">
+        <p *ngIf="employeeForm.get('DoB')?.errors?.['required']"> DOB is required</p>
+  
+      </div>
     <br>
 
     <div formGroupName="Adderess">
         <label for="">AddressLine</label>
         <input formControlName="addressLine" type="text">
+        <div class="error" *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.touched && employeeForm.get('Adderess')?.get('addressLine')?.invalid ">
+            <p *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.errors?.['required']"> City required</p>
+            <p *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.errors?.['minlength']"> min 2 characters</p>
+    
+        </div>
         <br>
 
         <label for="">City</label>
         <input formControlName="city" type="text">
+        <div class="error" *ngIf="employeeForm.get('Adderess')?.get('city')?.touched && employeeForm.get('Adderess')?.get('city')?.invalid ">
+            <p *ngIf="employeeForm.get('Adderess')?.get('city')?.errors?.['required']"> city required</p>
+            <p *ngIf="employeeForm.get('Adderess')?.get('city')?.errors?.['minlength']"> city should be 2 characters</p>
+    
+        </div>
         <br>
 
         <label for="">State</label>
         <input formControlName="state" type="text">
+        <div class="error" *ngIf="employeeForm.get('Adderess')?.get('state')?.touched && employeeForm.get('Adderess')?.get('state')?.invalid ">
+            <p *ngIf="employeeForm.get('Adderess')?.get('state')?.errors?.['required']"> state required</p>
+            <p *ngIf="employeeForm.get('Adderess')?.get('state')?.errors?.['minlength']"> state should be 5 characters</p>
+    
+        </div>
         <br>
 
         <label for="">Pincode</label>
         <input formControlName="pincode" type="text">
+        <div class="error" *ngIf="employeeForm.get('Adderess')?.get('pincode')?.touched && employeeForm.get('Adderess')?.get('pincode')?.invalid ">
+            <p *ngIf="employeeForm.get('Adderess')?.get('pincode')?.errors?.['required']"> pin required</p>
+            <p *ngIf="employeeForm.get('Adderess')?.get('pincode')?.errors?.['min']"> invalid pin less tha 6 digits</p>
+            <p *ngIf="employeeForm.get('Adderess')?.get('pincode')?.errors?.['max']"> invalid pin greater tha 6 digits</p>
+
+        </div>
         <br>
 
         <div formGroupName="Location">
 
             <label for="">Nearby</label>
             <input formControlName="nearby" type="text">
+            <div class="error" *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.touched && employeeForm.get('Adderess')?.get('pincode')?.invalid ">
+                <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.errors?.['required']"> nearby required</p>
+                <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.errors?.['minlegth']"> invalid pin less tha 6 digits</p>
+                <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.errors?.['maxlength']"> invalid pin greater tha 6 digits</p>
+    
+            </div>
             <br>
 
             <label for="">Landmark</label>
@@ -52,14 +100,23 @@
                 <h3>Educational Details: {{i+1}}</h3>
                 <label for="">Qualification</label>
                 <input formControlName="qualification" type="text" name="" id="">
+                <div class="error" *ngIf="employeeEducation.controls[i]?.get('qualification')?.touched && employeeEducation.controls[i]?.get('qualification')?.invalid">
+                  <p *ngIf="employeeEducation.controls[i]?.get('qualification')?.errors?.['required']"> exeprience field should not be empty</p>
+                </div>
                 <br>
 
                 <label for="">Year</label>
                 <input formControlName="year" type="text" name="" id="">
+                <div class="error" *ngIf="employeeEducation.controls[i]?.get('year')?.touched && employeeEducation.controls[i]?.get('year')?.invalid">
+                    <p *ngIf="employeeEducation.controls[i]?.get('year')?.errors?.['required']"> year field should not be empty</p>
+                  </div>
                 <br>
 
                 <label for="">Percentage</label>
                 <input formControlName="percentage" type="text" name="" id="">
+                <div class="error" *ngIf="employeeEducation.controls[i]?.get('percentage')?.touched && employeeEducation.controls[i]?.get('percentage')?.invalid">
+                    <p *ngIf="employeeEducation.controls[i]?.get('percentage')?.errors?.['required']"> percentage field should not be empty</p>
+                  </div>
                 <br>
                 <button class="btn btn-danger" (click)="delete(i)">delete</button>
 

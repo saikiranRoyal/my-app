@@ -20,6 +20,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductsComponent } from './products/products.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
@@ -40,7 +41,9 @@ const routes: Routes = [
     {path:"create-vehicle", component:CreateVehicleComponent,  canDeactivate:[NotifyGuard]},
     {path:"create-bankdetails", component:CreateBankdetailsComponent},
     {path:"create-student", component:CreateStudentComponent, canDeactivate:[NotifyGuard]},
-    {path:'employee', component:EmployeComponent}
+    {path:'employee', component:EmployeComponent, canDeactivate:[NotifyGuard]},
+    {path:'vehicle-details/:id', component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id', component:CreateVehicleComponent}
   ]},
   // {path:"calculator", component: CalculatorComponent},
   {path:"", component: LoginComponent},
