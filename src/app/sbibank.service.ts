@@ -12,6 +12,11 @@ export class SbibankService {
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals");
   }
 
+  Bankuserdetails(id:any):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id);
+  }
+
+
   getBankdetailsfilter(term:any):Observable<any>{
   return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?filter="+term);
 }
@@ -29,5 +34,8 @@ deletebankaccount(id:string):Observable<any>{
 }
 createbankdetails(data:any):Observable<any>{
   return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data);
+}
+updatebankdetails(data:any,id:any):Observable<any>{
+  return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id,data)
 }
 }

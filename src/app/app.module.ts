@@ -25,6 +25,7 @@ import { CreateBankdetailsComponent } from './create-bankdetails/create-bankdeta
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { EmployeComponent } from './employe/employe.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { BankUserDetailsComponent } from './bank-user-details/bank-user-details.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 
     EmployeComponent,
      VehicleDetailsComponent,
+     BankUserDetailsComponent,
   
     
   ],

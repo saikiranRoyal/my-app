@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
+import { BankUserDetailsComponent } from './bank-user-details/bank-user-details.component';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CreateBankdetailsComponent } from './create-bankdetails/create-bankdetails.component';
@@ -43,7 +44,10 @@ const routes: Routes = [
     {path:"create-student", component:CreateStudentComponent, canDeactivate:[NotifyGuard]},
     {path:'employee', component:EmployeComponent, canDeactivate:[NotifyGuard]},
     {path:'vehicle-details/:id', component:VehicleDetailsComponent},
-    {path:'edit-vehicle/:id', component:CreateVehicleComponent}
+    {path:'edit-vehicle/:id', component:CreateVehicleComponent},
+    {path:'bank-user-details/:id', component:BankUserDetailsComponent},
+    {path:'edit-bank/:id', component:CreateBankdetailsComponent},
+
   ]},
   // {path:"calculator", component: CalculatorComponent},
   {path:"", component: LoginComponent},

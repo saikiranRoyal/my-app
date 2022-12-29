@@ -39,7 +39,12 @@
             <td><img src="{{details.user_image}}" alt="" height="50" width="50"></td>
             <td>{{details.account_number}}</td>
             <td>{{details.id}}</td>
-            <td><button class="btn btn-danger" (click)="delete(details.id)">delete</button></td>
+            <td><button class="btn btn-danger" (click)="delete(details.id)">delete</button>
+                <button class="btn btn-primary" (click)="view(details.id)">view</button>
+                <button class="btn btn-primary" (click)="edit(details.id)">edit</button></td>
+
+            
+
             
        </tr>
     </tbody>
