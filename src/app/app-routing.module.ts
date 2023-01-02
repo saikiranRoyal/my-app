@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { BankUserDetailsComponent } from './bank-user-details/bank-user-details.component';
 import { BoredomComponent } from './boredom/boredom.component';
@@ -47,6 +48,11 @@ const routes: Routes = [
     {path:'edit-vehicle/:id', component:CreateVehicleComponent},
     {path:'bank-user-details/:id', component:BankUserDetailsComponent},
     {path:'edit-bank/:id', component:CreateBankdetailsComponent},
+    {path:"about-company", component:AboutCompanyComponent},
+    {
+      path: 'contact-us',
+      loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    }
 
   ]},
   // {path:"calculator", component: CalculatorComponent},
@@ -58,7 +64,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

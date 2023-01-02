@@ -26,6 +26,8 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { EmployeComponent } from './employe/employe.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { BankUserDetailsComponent } from './bank-user-details/bank-user-details.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { StarsComponent } from './stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { BankUserDetailsComponent } from './bank-user-details/bank-user-details.
     EmployeComponent,
      VehicleDetailsComponent,
      BankUserDetailsComponent,
+     StarsComponent,
   
     
   ],
@@ -60,7 +63,8 @@ import { BankUserDetailsComponent } from './bank-user-details/bank-user-details.
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
