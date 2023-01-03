@@ -7,6 +7,7 @@ import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CreateBankdetailsComponent } from './create-bankdetails/create-bankdetails.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateUserAccountComponent } from './registration/create-user-account/create-user-account.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -24,6 +25,9 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { ParentComponent } from './parent/parent.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 const routes: Routes = [
   {path:"login", component: LoginComponent},
@@ -49,6 +53,10 @@ const routes: Routes = [
     {path:'bank-user-details/:id', component:BankUserDetailsComponent},
     {path:'edit-bank/:id', component:CreateBankdetailsComponent},
     {path:"about-company", component:AboutCompanyComponent},
+    {path:"user-account", component:CreateUserAccountComponent},
+    {path:"parent", component:ParentComponent},
+    {path:"sibling1", component:Sibling1Component},
+    {path:"sibling2", component:Sibling2Component},
     {
       path: 'contact-us',
       loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)

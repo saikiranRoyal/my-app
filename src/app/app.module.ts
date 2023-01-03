@@ -28,6 +28,11 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { BankUserDetailsComponent } from './bank-user-details/bank-user-details.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { StarsComponent } from './stars/stars.component';
+import { RegistrationModule } from './registration/registration.module';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,10 @@ import { StarsComponent } from './stars/stars.component';
      VehicleDetailsComponent,
      BankUserDetailsComponent,
      StarsComponent,
+     ParentComponent,
+     ChildComponent,
+     Sibling1Component,
+     Sibling2Component,
   
     
   ],
@@ -64,7 +73,8 @@ import { StarsComponent } from './stars/stars.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutUsModule
+    AboutUsModule,
+    RegistrationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
