@@ -8,7 +8,9 @@
                     <p class="price"><span class="head">price:</span> {{data.price |currency:"INR":"symbol"}}</p>
                     <p class="rating"><span class="head">rating:</span> {{data.rating.count}}</p>
                     <p class="desc"><span class="head">description:</span> {{data.description}}</p>
-                    <app-stars [rating]="3"> </app-stars>
+                    <app-stars [rating]="data.rating.rate"> 
+                        <p>out of {{data.rating.count}} ratings</p>
+                    </app-stars>
                 </div>
             </div>
         
