@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Vehicle } from '../vehicle';
 import { VehicleService } from '../vehicle.service';
 
 @Component({
@@ -8,9 +9,10 @@ import { VehicleService } from '../vehicle.service';
   styleUrls: ['./vehicle.component.css']
 })
 export class VehicleComponent {
-  public vehicles:any=[]
+ 
   public term:string= "";
   public id:string="";
+  public vehicles:Vehicle[]=[];
   
 
     constructor(private _vehicleservice:VehicleService, private router:Router){
