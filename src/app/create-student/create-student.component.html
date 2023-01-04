@@ -37,6 +37,8 @@
     <div class="error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid ">
       <p *ngIf="studentForm.get('email')?.errors?.['required']">email is required</p>
       <p *ngIf="studentForm.get('email')?.errors?.['email']">email is required</p>
+      <p *ngIf="studentForm.get('email')?.errors?.['emailDomain']">email should contain @capgemini.com </p>
+
 
    </div>
     <br>
