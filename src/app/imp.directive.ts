@@ -1,10 +1,12 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appImp]'
 })
 export class ImpDirective {
 
-  constructor() { }
+  constructor(private _elementRef:ElementRef) {
+    this._elementRef.nativeElement.style.color= "red"
+   }
 
 }
