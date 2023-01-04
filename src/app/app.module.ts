@@ -33,6 +33,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
+import { PricePipe } from './price.pipe';
+import { YearPipe } from './year.pipe';
+import { ImpDirective } from './imp.directive';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,9 @@ import { Sibling2Component } from './sibling2/sibling2.component';
      ChildComponent,
      Sibling1Component,
      Sibling2Component,
+     PricePipe,
+     YearPipe,
+     ImpDirective,
   
     
   ],

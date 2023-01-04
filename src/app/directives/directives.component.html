@@ -15,7 +15,7 @@
     <thead>
     <tr>
         <th>Name</th>
-        <th>age</th>
+        <th>age </th>
         <th>package</th>
 
 
@@ -24,7 +24,7 @@
 <tbody>
     <tr *ngFor="let user of users">
          <td>{{user.name | uppercase}}</td>
-         <td [ngClass]="{'red':user.age<20, 'yellow':user.age>=20&&user.age<30, 'green':user.age>=30}">{{user.age}}</td>
+         <td [ngClass]="{'red':user.age<20, 'yellow':user.age>=20&&user.age<30, 'green':user.age>=30}">{{user.age | year}}</td>
          <td [ngStyle]="{'background-color':user.package<10?'red':'green'}">{{user.package}}</td>
     </tr>
 </tbody>
