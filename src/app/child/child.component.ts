@@ -6,12 +6,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-
-  @Input() public a: number=0;
-
-  @Output() bEvent:EventEmitter<any>=new EventEmitter();
-
-  send(){
-    this.bEvent.emit(20);
-  }
+   @Input()  public a :number=10;
+   public b:number=0;
+   @Output() bEvent:EventEmitter<number>=new EventEmitter();
+   send(){
+      this.bEvent.emit(this.b);
+   }
 }

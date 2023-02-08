@@ -6,11 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
-test(){
-  alert('clicked')
-}
-
-catch(value:any){
-  alert(value)
-}
+  public a :number=10;
+  catch(value:number){
+    alert("in parent"+value);
+  }
 }

@@ -1,2 +1,3 @@
-<p>child works!</p> 
-<button (click)="send()">send</button>
+<ng-content></ng-content>
+<h1>a value:{{a}}</h1>
+<input type="number" (change)="send()" [(ngModel)]="b">

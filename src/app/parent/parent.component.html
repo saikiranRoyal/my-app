@@ -1,4 +1,5 @@
-<p>parent works!</p>
-<button [disabled]="false " (click)="test()">Submit</button>
-
-<app-child [a]="10" (bEvent)="catch($event)"></app-child>
+<input type="number" [(ngModel)]="a">
+<app-child [a]="a" (bEvent)="catch($event)">
+    <h1 style="color: red;">HI,Welcome,</h1>
+    <h2 style="color: red;">To Angular</h2>
+</app-child>
